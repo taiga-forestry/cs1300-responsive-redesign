@@ -1,45 +1,242 @@
-  <!-- TO RUN IN BROWSER:
-    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
-    2. Right click html file and either run in default browser or another browser
-  -->
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
-    <!-- import CSS styles -->
-    <link rel="stylesheet" href="styles.css" /> 
-  </head>
+    <head>
+      <!-- meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="Tiger Ji's Word Hippo Redesign">
+	    <meta name="keywords" content="Tiger Ji, Brown University">
+        <title> Tiger Ji's Word Hippo Redesign </title>
 
-  <!-- page content goes into <body> -->
-  <body>
-    <main>
-      <div id="logoBar">
-        <h1>Welcome to 100 Acre Wood!</h1>
-        <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-        <h3>We're glad you're here :D</h3>
-      </div>
-      <div id="staffGallery">
-        <div class="card">
-          <p> Eeyore-Eh </p>
-          <img class="galleryImage" src="./assets/Eeyore-Eh.png" alt="pic of Eeyore-Eh"/>
-        </div>
-        <div class="card">
-          <p> Eeyore-Zz </p>
-          <img class="galleryImage" src="./assets/Eeyore-Zz.png" alt="pic of EeyoreZz"/>
-        </div>
-        <div class="card">
-          <p> Kanga-Roo </p>
-          <img class="galleryImage" src="./assets/Kanga-Roo.png" alt="pic of Kanga-Roo"/>
-        </div>
-        <div class="card">
-          <p> Owl-Phone </p>
-          <img class="galleryImage" src="./assets/Owl-Phone.png" alt="pic of Owl-Phone"/>
-        </div>
-      </div>
-    </main>
-  </body>
+        <!-- personal styles and google fonts + icons -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+        </style>
 
+        <!-- personal scripts, fontawesome, and jquery -->
+        <script src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/35850cf6ad.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <header class="column">
+          <div class="row">
+            <img src="assets/index_hippo_logo.png" id="hippo-logo" alt="Hippo Logo" aria-label="Hippo Logo">
+            <img src="assets/index_hippo_text_logo.png" id="hippo-text-logo" alt="Word Hippo Title Text" aria-label="Word Hippo Title Text">
+          </div>
+
+          <div class="row inputs">
+            <div class="relative">
+              <div class="row dropdown">
+                <input value="Synonyms" onfocus="showSynonyms()" onblur="hideSynonyms()" readonly>
+                <i class="fa fa-caret-down right"></i>
+              </div>
+
+              <ul id="options-list" class="hidden"> 
+                <li> Synonyms </li>
+                <li> Antonyms </li>
+                <li> Definitions </li>
+                <li> Rhymes </li>
+                <li> Sentences </li>
+                <li> Translations </li>
+                <li> Find Words </li>
+              </ul>
+            </div>
+            <p> for </p>
+
+            <div class="relative">
+              <div class="row dropdown">
+                <input value="Accessibility" onfocus="showOptions()" onblur="hideOptions()">
+                <i class="fa fa-search"></i>
+              </div>
+
+              <ul id="suggestions-list" class="hidden">
+                <li> Access </li>
+                <li> Accessible </li>
+                <li> Accessibility </li>
+                <li> Accessor </li>
+                <li> Accessory </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <main class="grid">
+          <div class="column main-content">
+            <section>
+              <h2> What is another word for </h2>
+              <h2 class="text-light-blue"> accessibility? </h2>
+            </section>
+  
+            <section>
+              <h2> Contexts </h2>
+              <ul class="context-list">
+                <li class="context-item">
+                  <u>
+                    <a href="#a">
+                      The quality of being able to be reached or entered
+                    </a>
+                  </u>
+                </li>
+                <li class="context-item">
+                  <u>
+                    <a href="#b">
+                      The quality of being easily understood or appreciated
+                    </a>
+                  </u>
+                </li>
+                <li class="context-item">
+                  <u>
+                    <a href="#c">
+                      The quality of being friendly or easily approached when needed
+                    </a>
+                  </u>
+                </li>
+                <!-- <li class="context-item">
+                  <u>
+                    <a href="#d">
+                      The state of being receptive to suggestion or new ideas
+                    </a>
+                  </u>
+                </li> -->
+              </ul>
+            </section>
+  
+            <section id="a" class="column card">
+              <div class="row description">
+                <h2> Noun </h2>
+                <i class="fa fa-chevron-circle-down right"></i>
+              </div>
+              <p> The quality of being able to be reached or entered </p>
+  
+              <div class="row synonyms-list">
+                <p class="synonym"> <a href="/"> Convenience </a> </p>
+                <p class="synonym"> <a href="/"> Handiness </a> </p>
+                <p class="synonym"> <a href="/"> Availability </a> </p>
+                <p class="synonym"> <a href="/"> Attainability </a> </p>
+                <p class="synonym"> <a href="/"> Readiness </a> </p>
+                <p class="synonym"> <a href="/"> Nearness </a> </p>
+                <p class="synonym"> <a href="/"> Exposedness </a> </p>
+                <p class="synonym"> <a href="/"> Possibility </a> </p>
+                <p class="synonym"> <a href="/"> Reachability </a> </p>
+                <p class="synonym"> <a href="/"> Susceptibility </a> </p>
+              </div>
+  
+              <p class="italicize"> “Reliable and affordable public transport determines accessibility to both employment and housing.” </p>
+            </section>
+
+            <section id="b" class="column card">
+              <div class="row description">
+                <h2> Noun </h2>
+                <i class="fa fa-chevron-circle-down right"></i>
+              </div>
+              <p> The quality of being easily understood or appreciated </p>
+  
+              <div class="row synonyms-list">
+                <p class="synonym"> <a href="/"> Comprehensibility </a> </p>
+                <p class="synonym"> <a href="/"> Intelligibility </a> </p>
+                <p class="synonym"> <a href="/"> Understandability </a> </p>
+                <p class="synonym"> <a href="/"> Approachability </a> </p>
+                <p class="synonym"> <a href="/"> Penetrability </a> </p>
+                <p class="synonym"> <a href="/"> User-friendliness </a> </p>
+                <p class="synonym"> <a href="/"> Ease of Understanding </a> </p>
+                <p class="synonym"> <a href="/"> Coherence </a> </p>
+                <p class="synonym"> <a href="/"> Clarity </a> </p>
+                <p class="synonym"> <a href="/"> Clearness </a> </p>
+                <p class="synonym"> <a href="/"> Explicitness </a> </p>
+                <p class="synonym"> <a href="/"> Simplicity </a> </p>
+                <p class="synonym"> <a href="/"> Plainness </a> </p>
+              </div>
+  
+              <p class="italicize"> “Part of Gilpin's appeal lay in the accessibility of his theories. The picturesque, as discussed in his writings, was easy to understand and to imitate.” </p>
+            </section>
+
+            <section id="c" class="column card">
+              <div class="row description">
+                <h2> Noun </h2>
+                <i class="fa fa-chevron-circle-down right"></i>
+              </div>
+              <p> The quality of being friendly or easily approached when needed </p>
+  
+              <div class="row synonyms-list">
+                <p class="synonym"> <a href="/"> Friendliness </a> </p>
+                <p class="synonym"> <a href="/"> Openness </a> </p>
+                <p class="synonym"> <a href="/"> Cordiality </a> </p>
+                <p class="synonym"> <a href="/"> Approachability </a> </p>
+                <p class="synonym"> <a href="/"> Affability </a> </p>
+                <p class="synonym"> <a href="/"> Congeniality </a> </p>
+                <p class="synonym"> <a href="/"> Agreeableness </a> </p>
+                <p class="synonym"> <a href="/"> Informality </a> </p>
+                <p class="synonym"> <a href="/"> Availability </a> </p>
+                <p class="synonym"> <a href="/"> Receptiveness </a> </p>
+                <p class="synonym"> <a href="/"> Conversableness </a> </p>
+              </div>
+  
+              <p class="italicize"> “Rather, she was a warm, plainspoken, down-to-earth woman, who was notable for her accessibility to students.” </p>
+            </section>
+
+            <!-- <section id="d" class="column card">
+              <div class="row description">
+                <h2> Noun </h2>
+                <i class="fa fa-chevron-circle-down right"></i>
+              </div>
+              <p> The state of being receptive to suggestion or new ideas </p>
+  
+              <div class="row synonyms-list">
+                <p class="synonym"> <a href="/"> Receptivity </a> </p>
+                <p class="synonym"> <a href="/"> Openness </a> </p>
+                <p class="synonym"> <a href="/"> Approachability </a> </p>
+                <p class="synonym"> <a href="/"> Tolerance </a> </p>
+                <p class="synonym"> <a href="/"> Impartiality </a> </p>
+                <p class="synonym"> <a href="/"> Responsiveness </a> </p>
+                <p class="synonym"> <a href="/"> Receptiveness </a> </p>
+                <p class="synonym"> <a href="/"> Acceptance </a> </p>
+                <p class="synonym"> <a href="/"> Observance </a> </p>
+                <p class="synonym"> <a href="/"> Understanding </a> </p>
+                <p class="synonym"> <a href="/"> Friendliness </a> </p>
+                <p class="synonym"> <a href="/"> Interest </a> </p>
+                <p class="synonym"> <a href="/"> Broad-Mindedness </a> </p>
+              </div> -->
+  
+              <!-- <p class="italicize"> “Rather, she was a warm, plainspoken, down-to-earth woman, who was notable for her accessibility to students.” </p> -->
+            <!-- </section> -->
+          </div>
+
+          <div class="side-content">
+            <section class="column related-panel">
+              <h3> Related Words </h3>
+              <ul class="related-list">
+                <li>
+                  <u>
+                    <a href="/">
+                      Access
+                    </a>
+                  </u>
+                </li>
+                <li>
+                  <u>
+                    <a href="/">
+                      Accessor
+                    </a>
+                  </u>
+                </li>
+                <li>
+                  <u>
+                    <a href="/">
+                      Accessible
+                    </a>
+                  </u>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </main>
+    </body>
 </html>
+
+
